@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, ArrowRight, FileText, Linkedin, Github, Cpu, Radio, Layers, Bot, Mail, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight, ArrowRight, FileText, Linkedin, Github, Cpu, Radio, Layers, Bot } from 'lucide-react';
 import { projectsData } from '../data/projects';
 
 export default function HomePage() {
@@ -83,30 +83,6 @@ export default function HomePage() {
             </a>
           </div>
 
-          {/* 30-Second Recruiter Summary Strip */}
-          <div className="mt-14 pt-8 border-t border-slate-800/80">
-            <div className="text-xs font-mono text-slate-400 uppercase tracking-wider mb-4">
-              Core Technical Focus
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="rounded-lg border border-slate-800/90 bg-[#0d121c] p-3.5">
-                <div className="text-xs font-semibold text-slate-200">Firmware & RTOS</div>
-                <div className="text-xs text-slate-400 mt-1">C/C++, ESP-IDF, FreeRTOS, non-blocking drivers</div>
-              </div>
-              <div className="rounded-lg border border-slate-800/90 bg-[#0d121c] p-3.5">
-                <div className="text-xs font-semibold text-slate-200">Virtual Emulation</div>
-                <div className="text-xs text-slate-400 mt-1">QEMU, mocked peripherals, fault injection</div>
-              </div>
-              <div className="rounded-lg border border-slate-800/90 bg-[#0d121c] p-3.5">
-                <div className="text-xs font-semibold text-slate-200">Robotics Control</div>
-                <div className="text-xs text-slate-400 mt-1">ROS 2, MoveIt kinematics, RViz simulation</div>
-              </div>
-              <div className="rounded-lg border border-slate-800/90 bg-[#0d121c] p-3.5">
-                <div className="text-xs font-semibold text-slate-200">Hardware & PCB</div>
-                <div className="text-xs text-slate-400 mt-1">Altium Designer, flex PCB stackups, sensors</div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -185,108 +161,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Engineering Principles / Approach Highlights */}
-      <section className="relative py-16 px-6 border-t border-slate-800/80 bg-[#090d15]/50">
-        <div className="mx-auto max-w-5xl">
-          <div className="mb-8">
-            <h3 className="text-lg font-semibold text-slate-100">
-              Engineering Approach & Principles
-            </h3>
-            <p className="text-sm text-slate-400 mt-1 max-w-2xl">
-              How I approach building reliable embedded systems and integrating software with physical hardware.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="rounded-xl border border-slate-800/90 bg-[#0d121c] p-5">
-              <div className="flex items-center gap-2 mb-2 text-blue-400 text-xs font-mono uppercase">
-                <CheckCircle2 className="h-3.5 w-3.5" />
-                <span>Deterministic Firmware</span>
-              </div>
-              <h4 className="text-sm font-medium text-slate-200">Zero-Heap & Static Allocation</h4>
-              <p className="text-xs text-slate-400 mt-2 leading-relaxed">
-                Prioritizing compile-time memory bounds, ring buffers, and fast non-blocking interrupt routines over fragile dynamic allocations.
-              </p>
-            </div>
-
-            <div className="rounded-xl border border-slate-800/90 bg-[#0d121c] p-5">
-              <div className="flex items-center gap-2 mb-2 text-blue-400 text-xs font-mono uppercase">
-                <CheckCircle2 className="h-3.5 w-3.5" />
-                <span>Shift-Left Testing</span>
-              </div>
-              <h4 className="text-sm font-medium text-slate-200">Host Emulation Before Hardware</h4>
-              <p className="text-xs text-slate-400 mt-2 leading-relaxed">
-                Simulating peripheral registers and bus protocols in QEMU to catch edge-case logic faults before flashing physical hardware.
-              </p>
-            </div>
-
-            <div className="rounded-xl border border-slate-800/90 bg-[#0d121c] p-5">
-              <div className="flex items-center gap-2 mb-2 text-blue-400 text-xs font-mono uppercase">
-                <CheckCircle2 className="h-3.5 w-3.5" />
-                <span>Clean Abstraction</span>
-              </div>
-              <h4 className="text-sm font-medium text-slate-200">Driver & Hardware Decoupling</h4>
-              <p className="text-xs text-slate-400 mt-2 leading-relaxed">
-                Structuring clean hardware abstraction layers (HAL) so sensor state and communications can be transparently injected or tested.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section at bottom */}
-      <section className="relative py-20 px-6 border-t border-slate-800">
-        <div className="mx-auto max-w-5xl">
-          <div className="rounded-2xl border border-slate-800 bg-[#0d131f] p-8 md:p-12 relative overflow-hidden">
-            {/* Subtle glow backdrop */}
-            <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
-
-            <div className="relative z-10 max-w-2xl">
-              <div className="text-xs font-mono text-blue-400 uppercase tracking-wider mb-2">
-                Internship & Engineering Opportunities
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-100">
-                Let&apos;s Build Together
-              </h2>
-              <p className="mt-3 text-sm md:text-base text-slate-300 leading-relaxed">
-                I am actively seeking engineering internships in embedded systems, firmware development, robotics, and hardware-software integration.
-              </p>
-
-              <div className="mt-8 flex flex-wrap items-center gap-4">
-                <a
-                  href="mailto:loganchook@gmail.com"
-                  className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-500 transition-colors shadow-sm"
-                >
-                  <Mail className="h-4 w-4" />
-                  <span>loganchook@gmail.com</span>
-                </a>
-
-                <a
-                  href="https://www.linkedin.com/in/loganchook"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-slate-700 bg-slate-900 px-4 py-2.5 text-sm font-medium text-slate-200 hover:text-white hover:border-slate-600 transition-colors"
-                >
-                  <Linkedin className="h-4 w-4 text-blue-400" />
-                  <span>LinkedIn Profile</span>
-                  <ArrowUpRight className="h-3.5 w-3.5 text-slate-400" />
-                </a>
-
-                <a
-                  href="https://github.com/loganchook"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-slate-700 bg-slate-900 px-4 py-2.5 text-sm font-medium text-slate-200 hover:text-white hover:border-slate-600 transition-colors"
-                >
-                  <Github className="h-4 w-4 text-slate-300" />
-                  <span>GitHub</span>
-                  <ArrowUpRight className="h-3.5 w-3.5 text-slate-400" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
